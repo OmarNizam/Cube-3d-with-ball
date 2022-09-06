@@ -35,7 +35,27 @@ body {
   left: -0.5em;
   bottom: 1em;
   background-image: radial-gradient(circle at top, #add8e6, #000);
-  animation: sceneRotate 30s infinite linear reverse;
+  animation: ballPounce 2s infinite ease-out, sceneRotate 30s infinite linear reverse;
+}
+@-webkit-keyframes ballPounce {
+  0%, 100% {
+    bottom: 1em;
+  }
+  50% {
+    bottom: 3em;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+@keyframes ballPounce {
+  0%, 100% {
+    bottom: 1em;
+  }
+  50% {
+    bottom: 3em;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
 }
 
 .ball-shadow {

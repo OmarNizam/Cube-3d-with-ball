@@ -1,5 +1,6 @@
 $box-color: #0ff7;
 $ball-color: #add8e6;
+$rotateSpeed: 30s;
 
 body {
   background-color: #000;
@@ -15,6 +16,14 @@ body {
 .scene {
   position: relative;
   transform-style: preserve-3d;
+
+  animation: sceneRotate $rotateSpeed infinite linear;
+
+  @keyframes sceneRotate {
+    to {
+      transform: rotateY(360deg);
+    }
+  }
 }
 
 .ball {
@@ -27,6 +36,8 @@ body {
   left: -0.5em;
   bottom: 1em;
   background-image: radial-gradient(circle at top, $ball-color, #000);
+
+  animation: sceneRotate $rotateSpeed infinite linear reverse;
 }
 
 .ball-shadow {

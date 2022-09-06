@@ -12,6 +12,18 @@ body {
 .scene {
   position: relative;
   transform-style: preserve-3d;
+  -webkit-animation: sceneRotate 30s infinite linear;
+          animation: sceneRotate 30s infinite linear;
+}
+@-webkit-keyframes sceneRotate {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes sceneRotate {
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 .ball {
@@ -23,6 +35,7 @@ body {
   left: -0.5em;
   bottom: 1em;
   background-image: radial-gradient(circle at top, #add8e6, #000);
+  animation: sceneRotate 30s infinite linear reverse;
 }
 
 .ball-shadow {

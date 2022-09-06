@@ -25,6 +25,13 @@ body {
   background-image: radial-gradient(circle at top, #add8e6, #000);
 }
 
+.ball-shadow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.4666666667), rgba(0, 0, 0, 0) 50%);
+}
+
 .cube {
   height: 2em;
   width: 2em;

@@ -39,7 +39,7 @@ body {
 }
 @-webkit-keyframes ballPounce {
   0%, 100% {
-    bottom: 1em;
+    bottom: 0.5em;
   }
   50% {
     bottom: 3em;
@@ -49,7 +49,7 @@ body {
 }
 @keyframes ballPounce {
   0%, 100% {
-    bottom: 1em;
+    bottom: 0.5em;
   }
   50% {
     bottom: 3em;
@@ -67,7 +67,7 @@ body {
           animation: ballShadow 1.5s infinite ease-out;
 }
 @-webkit-keyframes ballShadow {
-  0%, 100% {
+  0%, 8%, 93.5%, 100% {
     transform: scale(1);
     opacity: 1;
   }
@@ -79,7 +79,7 @@ body {
   }
 }
 @keyframes ballShadow {
-  0%, 100% {
+  0%, 8%, 93.5%, 100% {
     transform: scale(1);
     opacity: 1;
   }
@@ -97,8 +97,26 @@ body {
   /*   background: $box-color */
   transform-style: preserve-3d;
   position: absolute;
-  top: -1em;
+  bottom: -1em;
   left: -1em;
+  -webkit-animation: cubeHeight 1.5s infinite linear;
+          animation: cubeHeight 1.5s infinite linear;
+}
+@-webkit-keyframes cubeHeight {
+  0%, 100% {
+    height: 1.5em;
+  }
+  8%, 93.5% {
+    height: 2em;
+  }
+}
+@keyframes cubeHeight {
+  0%, 100% {
+    height: 1.5em;
+  }
+  8%, 93.5% {
+    height: 2em;
+  }
 }
 .cube .left,
 .cube .right,
@@ -133,7 +151,7 @@ body {
 .cube .bottom {
   position: absolute;
   width: 2em;
-  height: 2em;
+  height: 0em;
   background: rgba(0, 0, 0, 0.4666666667);
   transform: translateY(-50%) rotateX(90deg);
   box-shadow: 0 0 0.5em #000;

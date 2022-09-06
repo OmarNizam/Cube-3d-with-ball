@@ -1,7 +1,7 @@
 $box-color: #0ff7;
 $ball-color: #add8e6;
 $rotateSpeed: 30s;
-$bounceSpeed: 2s;
+$bounceSpeed: 1.5s;
 
 body {
   background-color: #000;
@@ -58,6 +58,20 @@ body {
   height: 100%;
   width: 100%;
   background-image: radial-gradient(#0007, #0000 50%);
+
+  animation: ballShadow $bounceSpeed infinite ease-out;
+  @keyframes ballShadow {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(2);
+      opacity: 0.5;
+      animation-timing-function: ease-in;
+    }
+  }
 }
 
 .cube {

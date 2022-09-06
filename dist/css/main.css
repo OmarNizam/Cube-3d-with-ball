@@ -35,7 +35,7 @@ body {
   left: -0.5em;
   bottom: 1em;
   background-image: radial-gradient(circle at top, #add8e6, #000);
-  animation: ballPounce 2s infinite ease-out, sceneRotate 30s infinite linear reverse;
+  animation: ballPounce 1.5s infinite ease-out, sceneRotate 30s infinite linear reverse;
 }
 @-webkit-keyframes ballPounce {
   0%, 100% {
@@ -63,6 +63,32 @@ body {
   height: 100%;
   width: 100%;
   background-image: radial-gradient(rgba(0, 0, 0, 0.4666666667), rgba(0, 0, 0, 0) 50%);
+  -webkit-animation: ballShadow 1.5s infinite ease-out;
+          animation: ballShadow 1.5s infinite ease-out;
+}
+@-webkit-keyframes ballShadow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+@keyframes ballShadow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
 }
 
 .cube {

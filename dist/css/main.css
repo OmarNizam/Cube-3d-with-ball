@@ -63,6 +63,15 @@ body {
   transform: translateY(-50%) rotateX(90deg);
   box-shadow: 0 0 0.5em inset;
 }
+.cube .bottom {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background: rgba(0, 0, 0, 0.4666666667);
+  transform: translateY(-50%) rotateX(90deg);
+  box-shadow: 0 0 0.5em #000;
+  bottom: 0;
+}
 
 .floor {
   height: 15em;

@@ -69,6 +69,16 @@ body {
     transform: translateY(-50%) rotateX(90deg);
     box-shadow: 0 0 0.5em inset;
   }
+
+  .bottom {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background: #0007;
+    transform: translateY(-50%) rotateX(90deg);
+    box-shadow: 0 0 0.5em #000;
+    bottom: 0;
+  }
 }
 
 .floor {
